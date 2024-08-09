@@ -1,12 +1,16 @@
-import java.text.SimpleDateFormat;
+
 import java.util.Scanner;
+import java.time.LocalDate;
+import java.time.Period;
+import java.time.format.DateTimeFormatter;
 import java.util.*;
 public class Registro {
     public static void main(String[] args) {
         Scanner reader = new Scanner(System.in);
+        Scanner ingreso = new Scanner(System.in);
 
-        String nombre= "";
-        String apellido= "";
+        String nombre = "";
+        String apellido = "";
         String sexo = "";
         String fechaNacimiento = "";
 
@@ -24,10 +28,8 @@ public class Registro {
         sexo = reader.nextLine();
 
         //Fecha de nacimiento
-        System.out.print("Ingrese su fecha de nacimiento dd-mm-yyyy");
-        fechaNacimiento = reader.nextLine();
-
-
+        System.out.print("Ingrese su fecha de nacimiento dd/mm/yyyy");
+        fechaNacimiento = ingreso.nextLine();
 
         //resultado de imprimir
         System.out.println("Tu nombre es " + nombre);
@@ -35,6 +37,21 @@ public class Registro {
         System.out.println("Tu sexo es " + sexo);
         System.out.println("Tu fecha de nacimiento es " + fechaNacimiento);
 
+        try {
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+            LocalDate fechaNac = LocalDate.parse(fechaNacimiento, formatter);
+            LocalDate fechaActual = LocalDate.now();
+            Period periodo = Period.between(fechaActual, fechaNac);
+            System.out.printf(" y tienes: %s años, %s meses y %s días",
+                    periodo.getYears(), periodo.getMonths(), periodo.getDays());
+        }
+        catch (Exception e) {
+            System.out.print("La fecha no tiene el formato correcto dd/mm/yyyy");
+        }
+        
 
     }
 }
+
+
+
