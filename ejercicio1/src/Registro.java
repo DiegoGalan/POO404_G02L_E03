@@ -3,8 +3,8 @@ import javax.swing.JOptionPane;
 import java.util.*;
 public class Registro {
     public static void main(String[] args) {
-        JOptionPane.showMessageDialog(null, "Hola Bienvenido al Ejercicio1");
         Scanner reader = new Scanner(System.in);
+        JOptionPane.showMessageDialog(null, "Hola Bienvenido al Ejercicio1");
         String nombre= "";
         String apellido= "";
         String sexo = "";
