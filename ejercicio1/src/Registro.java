@@ -5,21 +5,26 @@ public class Registro {
         Scanner reader = new Scanner(System.in);
         String nombre= "";
         String apellido= "";
-        String sexo= "";
+        String sexo = "";
         int edad;
 
-        //Solicitar nombre
+        //Solicitar el nombre
         System.out.print("Ingrese su nombre");
         nombre = reader.nextLine();
-        //ingrese su apellido
+
+        //ingrese el apellido
         System.out.print("Ingrese su apellido");
         apellido = reader.nextLine();
-        //Se ingresa el su edad
-        System.out.print("Ingrese su edad ");
-        edad = reader.nextInt();
-        //Solicitar su sexo
+
+        //Solicitar el sexo
         System.out.print("Ingrese su sexo");
         sexo = reader.nextLine();
+
+        //Se ingresa la edad
+        System.out.print("Ingrese su edad ");
+        edad = reader.nextInt();
+
+
 
         if (edad < 30) {
             System.out.print("Hola amigo " + nombre + apellido);
