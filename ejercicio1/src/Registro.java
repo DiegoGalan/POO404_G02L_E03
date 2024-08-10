@@ -35,27 +35,27 @@ public class Registro {
         //resultado
         // se encarga de para darle una bienvenida de pendiendo del sexo elegido
         if(sexo=='H'){
-            System.out.println("Hola amigo" + nombre + apellido + " aqui esta tu registro");
+            System.out.println("Hola amigo " + nombre + apellido + " aqui esta tu registro");
         }else if (sexo=='M'){
-            System.out.println("Hola amiga" + nombre + apellido + " aqui esta tu registro");
+            System.out.println("Hola amiga " + nombre + apellido + " aqui esta tu registro");
         }
         if(sexo=='h') {
-            System.out.println("Hola amigo" + nombre + apellido + " aqui esta tu registro");
+            System.out.println("Hola amigo " + nombre + apellido + " aqui esta tu registro");
         } else if (sexo=='m') {
-            System.out.println("Hola amiga" + nombre + apellido + " aqui esta tu registro");
+            System.out.println("Hola amiga " + nombre + apellido + " aqui esta tu registro");
         }
         System.out.println("Tu nombre es " + nombre);
         System.out.println("Tu apellido es " + apellido);
         //Se encargar de indentificar si es hombre o mujer
         if(sexo=='H'){
-            System.out.println("Tu Eres un Hombre");
+            System.out.println("Tu Eres un Hombre ");
         }else if (sexo=='M'){
-            System.out.println("Eres una Mujer");
+            System.out.println("Eres una Mujer ");
         }
         if(sexo=='h') {
-            System.out.println("Tu Eres un Hombre");
+            System.out.println("Tu Eres un Hombre ");
         } else if (sexo=='m') {
-            System.out.println("Eres una Mujer");
+            System.out.println("Eres una Mujer ");
         }
         System.out.println("Tu fecha de nacimiento es " + fechaNacimiento);
 
@@ -71,7 +71,6 @@ public class Registro {
         catch (Exception e) {
             System.out.print("La fecha no tiene el formato correcto dd/mm/yyyy");
         }
-        JOptionPane.showMessageDialog(null, "Gracias por su atencion");
 
     }
 }
