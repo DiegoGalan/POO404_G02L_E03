@@ -28,10 +28,11 @@ public class Registro {
         sexo = reader.nextLine();
 
         //Fecha de nacimiento
-        System.out.print("Ingrese su fecha de nacimiento dd/mm/yyyy");
+        System.out.print("Ingrese su fecha de nacimiento use el metodo dd/mm/yyyy con barras");
         fechaNacimiento = ingreso.nextLine();
 
         //resultado de imprimir
+        System.out.println("Hola amigo " + nombre + apellido + " aqui esta tu registro");
         System.out.println("Tu nombre es " + nombre);
         System.out.println("Tu apellido es " + apellido);
         System.out.println("Tu sexo es " + sexo);
@@ -48,6 +49,7 @@ public class Registro {
         catch (Exception e) {
             System.out.print("La fecha no tiene el formato correcto dd/mm/yyyy");
         }
+
         
 
     }
